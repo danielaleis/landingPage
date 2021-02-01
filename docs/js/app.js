@@ -63,16 +63,19 @@ document.addEventListener('scroll', function () {
     let scrollTop = window.pageYOffset;
     sections.forEach(current => {
         const height = current.offsetHeight;
-        const top = current.offsetTop;
+        const top = current.offsetTop - 526;
         sectionId = current.getAttribute("id");
         // Manages active class
+        console.log("height:"+height+" / top:"+top + " / scrollTop:"+scrollTop);
         if (
             scrollTop > top &&
             scrollTop <= top + height
         ) {
             document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
+           // console.log("the class was added!!");
         } else {
             document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+            //console.log("the class was removed!!");
         }
     });
 })

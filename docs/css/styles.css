@@ -323,7 +323,7 @@ section {
 
     .active {
         font-style: italic;
-        text-decoration: underline !important;
+        background-color: white;
     }
 
     section.your-active-class {
