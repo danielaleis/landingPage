@@ -72,9 +72,12 @@ document.addEventListener('scroll', function () {
             scrollTop <= top + height
         ) {
             document.querySelector("a[href*=" + sectionId + "]").classList.add("active");
+            document.getElementById(sectionId).classList.add("your-active-class");
            // console.log("the class was added!!");
         } else {
             document.querySelector("a[href*=" + sectionId + "]").classList.remove("active");
+            document.getElementById(sectionId).classList.remove("your-active-class");
+
             //console.log("the class was removed!!");
         }
     });
